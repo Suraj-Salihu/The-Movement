@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Awareness meetings across various states in Nigeria">
+<meta name="keywords" content="awareness, meetings, Nigeria, states, movement">
+<meta name="author" content="Suraj Salihu/SovexTechs">
+<title>The Movement Awareness Meetings</title>
+<style>
+:root {
+  --primary: #79C000;
+  --primary-dark: #5E9A00;
+  --secondary: #007850;
+  --secondary-light: #009966;
+  --accent: #FFD700;
+  --white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --medium-gray: #E0E0E0;
+  --dark-gray: #333333;
+  --text: #222222;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background-color: var(--light-gray);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin: 30px 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 2px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.state-section {
+  background-color: var(--white);
+  margin: 20px auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px 20px;
+  max-width: 800px;
+  transition: var(--transition);
+}
+
+.state-section:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.meeting-info {
+  margin-bottom: 20px;
+  background-color: var(--light-gray);
+  border-left: 4px solid var(--primary-dark);
+  padding: 10px 15px;
+  border-radius: var(--radius);
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+  max-height: 500px;
+  background: #f0f0f0;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 120, 80, 0.7);
+  user-select: none;
+  transition: var(--transition);
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev:hover, .next:hover {
+  background-color: var(--secondary);
+}
+
+.next {
+  right: 15px;
+}
+
+.prev {
+  left: 15px;
+}
+
+.highlighted {
+  border: 2px solid #007BFF;
+  padding: 10px;
+  background-color: #e7f1ff;
+  transition: background-color 0.3s;
+}
+/* Dot indicators */
+.dot-container {
+      text-align: center;
+      padding: 10px 0;
+}
+
+.dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      background-color: var(--medium-gray);
+      border-radius: 50%;
+      display: inline-block;
+      transition: var(--transition);
+      border: none;
+      outline: none;
+    }
+
+    .active, .dot:hover, .dot:focus {
+      background-color: var(--secondary);
+      transform: scale(1.2);
+    }
+    /* Back to top button */
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--secondary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: none;
+      z-index: 100;
+      transition: var(--transition);
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #back-to-top:hover, #back-to-top:focus {
+      background: var(--primary);
+      transform: scale(1.1);
+      outline: none;
+    }
+
+.active, .dot:hover {
+  background-color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.3rem; }
+  .meeting-info { padding: 8px 10px; }
+}
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .prev, .next {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+</style>
+</head>
+<body>
+<!-- Awareness Meetings sections -->
+<h1>Awareness Meetings</h1>
+<div id="loading-spinner" style="display: none;">Loading...</div>
+<!-- Adamawa -->
+<div id="adamawa" class="state-section">
+  <h2>Adamawa State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa1.jpg" alt="Adamawa Meeting 1">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa2.jpg" alt="Adamawa Meeting 2">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa3.jpg" alt="Adamawa Meeting 3">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa4.jpg" alt="Adamawa Meeting 4">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa5.jpg" alt="Adamawa Meeting 5">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa6.jpg" alt="Adamawa Meeting 6">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa7.jpg" alt="Adamawa Meeting 7">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa8.jpg" alt="Adamawa Meeting 8">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa9.jpg" alt="Adamawa Meeting 9">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa10.jpg" alt="Adamawa Meeting 10">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa11.jpg" alt="Adamawa Meeting 11">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa12.jpg" alt="Adamawa Meeting 12">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa13.jpg" alt="Adamawa Meeting 13">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa14.jpg" alt="Adamawa Meeting 14">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa15.jpg" alt="Adamawa Meeting 15">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa16.jpg" alt="Adamawa Meeting 16">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa17.jpg" alt="Adamawa Meeting 17">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa18.jpg" alt="Adamawa Meeting 18">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa19.jpg" alt="Adamawa Meeting 19">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa20.jpg" alt="Adamawa Meeting 20">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa21.jpg" alt="Adamawa Meeting 21">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa22.jpg" alt="Adamawa Meeting 22">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa23.jpg" alt="Adamawa Meeting 23">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa24.jpg" alt="Adamawa Meeting 24">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa25.jpg" alt="Adamawa Meeting 25">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa26.jpg" alt="Adamawa Meeting 26">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa27.jpg" alt="Adamawa Meeting 27">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa28.jpg" alt="Adamawa Meeting 28">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa29.jpg" alt="Adamawa Meeting 29">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa30.jpg" alt="Adamawa Meeting 30">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa31.jpg" alt="Adamawa Meeting 31">
+    </div>
+    <div class="mySlides adamawa-slides fade">
+      <img src="images/adamawa/adamawa32.jpg" alt="Adamawa Meeting 32">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'adamawa-slides')" aria-label="Previous Slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'adamawa-slides')" aria-label="Next Slide">&#10095;</a>
+    
+  </div>
+  <div class="dot-container" id="adamawa-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b> <br>Barr. Abbas Hamman Al'adamawy<br>
+    <b>Date:</b> Febuary 08, 2025</p>
+</div>
+
+<!-- Bauchi -->
+<div id="bauchi" class="state-section">
+  <h2>Bauchi State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi1.jpg" alt="Bauchi Meeting 1">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi2.png" alt="Bauchi Meeting 2">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi3.webp" alt="Bauchi Meeting 3">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi4.webp" alt="Bauchi Meeting 4">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi5.webp" alt="Bauchi Meeting 5">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi6.webp" alt="Bauchi Meeting 6">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi7.webp" alt="Bauchi Meeting 7">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi8.webp" alt="Bauchi Meeting 8">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi9.webp" alt="Bauchi Meeting 9">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi10.png" alt="Bauchi Meeting 10">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi11.webp" alt="Bauchi Meeting 11">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi12.jpg" alt="Bauchi Meeting 12">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi13.webp" alt="Bauchi Meeting 13">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi14.webp" alt="Bauchi Meeting 14">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi15.webp" alt="Bauchi Meeting 15">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi16.webp" alt="Bauchi Meeting 16">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi17.webp" alt="Bauchi Meeting 17">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi18.webp" alt="Bauchi Meeting 18">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi19.webp" alt="Bauchi Meeting 19">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi20.webp" alt="Bauchi Meeting 20">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi21.webp" alt="Bauchi Meeting 21">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi22.webp" alt="Bauchi Meeting 22">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi23.jpg" alt="Bauchi Meeting 23">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi24.jpg" alt="Bauchi Meeting 24">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi25.jpg" alt="Bauchi Meeting 25">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi26.jpg" alt="Bauchi Meeting 26">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi27.jpg" alt="Bauchi Meeting 27">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi28.jpg" alt="Bauchi Meeting 28">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi29.jpg" alt="Bauchi Meeting 29">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi30.jpg" alt="Bauchi Meeting 30">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi31.jpg" alt="Bauchi Meeting 31">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi32.jpg" alt="Bauchi Meeting 32">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi33.jpg" alt="Bauchi Meeting 33">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi34.jpg" alt="Bauchi Meeting 34">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi35.jpg" alt="Bauchi Meeting 35">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi36.jpg" alt="Bauchi Meeting 36">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi37.jpg" alt="Bauchi Meeting 37">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi38.jpg" alt="Bauchi Meeting 38">
+    </div>
+    <div class="mySlides bauchi-slides fade">
+      <img src="images/bauchi/bauchi39.jpg" alt="Bauchi Meeting 39">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'bauchi-slides')" aria-label="Previous Slide">&#10094;</a>
+<a class="next" onclick="plusSlides(1, 'bauchi-slides')" aria-label="Next Slide">&#10095;</a>
+  
+  </div>
+  <div class="dot-container" id="bauchi-dots"></div>
+  <p class="meeting-info"><b> Lead Convener:</b> <br>Cmrd. Mukhtar Muhammad Chinnaka<br>
+    <b>Date:</b> Febuary 15, 2025</p>
+</div>
+
+<!-- Borno -->
+<div id="borno" class="state-section">
+  <h2>Borno State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides borno-slides fade">
+      <img src="images/borno/borno1.jpg" alt="Borno Meeting 1">
+    </div>
+    <div class="mySlides borno-slides fade">
+      <img src="images/borno/borno2.jpg" alt="Borno Meeting 2">
+    </div>
+    <div class="mySlides borno-slides fade">
+      <img src="images/borno/borno3.jpg" alt="Borno Meeting 3">
+    </div>
+    <div class="mySlides borno-slides fade">
+      <img src="images/borno/borno4.jpg" alt="Borno Meeting 4">
+    </div>
+    <div class="mySlides borno-slides fade">
+      <img src="images/borno/borno5.jpg" alt="Borno Meeting 5">
+    </div>
+    <div class="mySlides borno-slides fade">
+      <img src="images/borno/borno6.jpg" alt="Borno Meeting 6">
+    </div>
+    <div class="mySlides borno-slides fade">
+      <img src="images/borno/borno7.jpg" alt="Borno Meeting 7">
+    </div>
+    <div class="mySlides borno-slides fade">
+      <img src="images/borno/borno8.jpg" alt="Borno Meeting 8">
+    </div>
+    <div class="mySlides borno-slides fade">
+      <img src="images/borno/borno9.jpg" alt="Borno Meeting 9">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'borno-slides')" aria-label="Previous Slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'borno-slides')" aria-label="Next Slide">&#10095;</a>
+    
+  </div>
+  <div class="dot-container" id="borno-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b> Ibarhim Yunus<br>
+    <b>Date:</b> Febuary 9, 2025</p>
+</div>
+
+<!-- Jigawa -->
+<div id="jigawa" class="state-section">
+  <h2>Jigawa State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa1.jpg" alt="Jigawa Meeting 1">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa2.jpg" alt="Jigawa Meeting 2">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa3.jpg" alt="Jigawa Meeting 3">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa4.jpg" alt="Jigawa Meeting 4">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa5.jpg" alt="Jigawa Meeting 5">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa6.jpg" alt="Jigawa Meeting 6">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa7.jpg" alt="Jigawa Meeting 7">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa8.jpg" alt="Jigawa Meeting 8">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa9.jpg" alt="Jigawa Meeting 9">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa10.jpg" alt="Jigawa Meeting 10">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa11.jpg" alt="Jigawa Meeting 11">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa12.jpg" alt="Jigawa Meeting 12">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa13.jpg" alt="Jigawa Meeting 13">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa14.jpg" alt="Jigawa Meeting 14">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa15.jpg" alt="Jigawa Meeting 15">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa16.jpg" alt="Jigawa Meeting 16">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa17.jpg" alt="Jigawa Meeting 17">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa18.jpg" alt="Jigawa Meeting 18">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa19.jpg" alt="Jigawa Meeting 19">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa20.jpg" alt="Jigawa Meeting 20">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa21.jpg" alt="Jigawa Meeting 21">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa22.jpg" alt="Jigawa Meeting 22">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa23.jpg" alt="Jigawa Meeting 23">
+    </div>
+    <div class="mySlides jigawa-slides fade">
+      <img src="images/jigawa/jigawa24.jpg" alt="Jigawa Meeting 24">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'jigawa-slides')" aria-label="Previous Slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'jigawa-slides')" aria-label="Next Slide">&#10095;</a>
+  </div>
+  <div class="dot-container" id="jigawa-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b> Ahmad Suraj Kyawa<br>
+    <b>Date:</b> Febuary 15, 2025</p>
+</div>
+
+<!-- Kaduna -->
+<div id="kaduna" class="state-section">
+  <h2>Kaduna State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna1.jpg" alt="Kaduna Meeting 1">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna2.jpg" alt="Kaduna Meeting 2">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna3.jpg" alt="Kaduna Meeting 3">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna4.jpg" alt="Kaduna Meeting 4">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna5.jpg" alt="Kaduna Meeting 5">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna6.jpg" alt="Kaduna Meeting 6">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna7.jpg" alt="Kaduna Meeting 7">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna8.jpg" alt="Kaduna Meeting 8">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna9.jpg" alt="Kaduna Meeting 9">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna10.jpg" alt="Kaduna Meeting 10">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna11.jpg" alt="Kaduna Meeting 11">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna12.jpg" alt="Kaduna Meeting 12">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna13.jpg" alt="Kaduna Meeting 13">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna14.jpg" alt="Kaduna Meeting 14">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna15.jpg" alt="Kaduna Meeting 15">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna16.jpg" alt="Kaduna Meeting 16">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna17.jpg" alt="Kaduna Meeting 17">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna18.jpg" alt="Kaduna Meeting 18">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna19.jpg" alt="Kaduna Meeting 19">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna20.jpg" alt="Kaduna Meeting 20">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna21.jpg" alt="Kaduna Meeting 21">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna22.jpg" alt="Kaduna Meeting 22">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna23.jpg" alt="Kaduna Meeting 23">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna24.jpg" alt="Kaduna Meeting 24">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna25.jpg" alt="Kaduna Meeting 25">
+    </div>
+    <div class="mySlides kaduna-slides fade">
+      <img src="images/kaduna/kaduna26.jpg" alt="Kaduna Meeting 26">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'kaduna-slides')" aria-label="Previous Slide">&#10094;</a>
+<a class="next" onclick="plusSlides(1, 'kaduna-slides')" aria-label="Next Slide">&#10095;</a>
+  </div>
+  <div class="dot-container" id="kaduna-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b><br> Cmrd. Hussaini Abdullahi Gambo<br>
+    <b>Date:</b> Febuary 23, 2025</p>
+</div>
+
+<!-- Katsina -->
+<div id="katsina" class="state-section">
+  <h2>Katsina State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina1.jpg" alt="Katsina Meeting 1">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina2.jpg" alt="Katsina Meeting 2">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina3.jpg" alt="Katsina Meeting 3">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina4.jpg" alt="Katsina Meeting 4">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina5.jpg" alt="Katsina Meeting 5">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina6.jpg" alt="Katsina Meeting 6">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina7.jpg" alt="Katsina Meeting 7">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina8.jpg" alt="Katsina Meeting 8">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina9.jpg" alt="Katsina Meeting 9">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina10.jpg" alt="Katsina Meeting 10">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina11.jpg" alt="Katsina Meeting 11">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina12.jpg" alt="Katsina Meeting 12">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina13.jpg" alt="Katsina Meeting 13">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina14.jpg" alt="Katsina Meeting 14">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina15.jpg" alt="Katsina Meeting 15">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina16.jpg" alt="Katsina Meeting 16">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina17.jpg" alt="Katsina Meeting 17">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina18.jpg" alt="Katsina Meeting 18">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina19.jpg" alt="Katsina Meeting 19">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina20.jpg" alt="Katsina Meeting 20">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina21.jpg" alt="Katsina Meeting 21">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina22.jpg" alt="Katsina Meeting 22">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina23.jpg" alt="Katsina Meeting 23">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina24.jpg" alt="Katsina Meeting 24">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina25.jpg" alt="Katsina Meeting 25">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina26.jpg" alt="Katsina Meeting 26">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina27.jpg" alt="Katsina Meeting 27">
+    </div>
+    <div class="mySlides katsina-slides fade">
+      <img src="images/katsina/katsina28.jpg" alt="Katsina Meeting 28">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'katsina-slides')" aria-label="Previous Slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'katsina-slides')" aria-label="Next Slide">&#10095;</a>
+  </div>
+  <div class="dot-container" id="katsina-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b> <br>Hon. Abdulrazaq Dahiru Kaita<br>
+    <b>Date:</b> May 19, 2025</p>
+</div>
+
+<!-- Plateau -->
+<div id="plateau" class="state-section">
+  <h2>Plateau State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau1.jpg" alt="Plateau Meeting 1">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau2.jpg" alt="Plateau Meeting 2">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau3.jpg" alt="Plateau Meeting 3">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau4.jpg" alt="Plateau Meeting 4">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau5.jpg" alt="Plateau Meeting 5">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau6.jpg" alt="Plateau Meeting 6">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau7.jpg" alt="Plateau Meeting 7">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau8.jpg" alt="Plateau Meeting 8">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau9.jpg" alt="Plateau Meeting 9">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau10.jpg" alt="Plateau Meeting 10">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau11.jpg" alt="Plateau Meeting 11">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau12.jpg" alt="Plateau Meeting 12">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau13.jpg" alt="Plateau Meeting 13">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau14.jpg" alt="Plateau Meeting 14">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau15.jpg" alt="Plateau Meeting 15">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau16.jpg" alt="Plateau Meeting 16">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau17.jpg" alt="Plateau Meeting 17">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau18.jpg" alt="Plateau Meeting 18">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau19.jpg" alt="Plateau Meeting 19">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau20.jpg" alt="Plateau Meeting 20">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau21.jpg" alt="Plateau Meeting 21">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau22.jpg" alt="Plateau Meeting 22">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau23.jpg" alt="Plateau Meeting 23">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau24.jpg" alt="Plateau Meeting 24">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau25.jpg" alt="Plateau Meeting 25">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau26.jpg" alt="Plateau Meeting 26">
+    </div>
+    <div class="mySlides plateau-slides fade">
+      <img src="images/plateau/plateau27.jpg" alt="Plateau Meeting 27">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'plateau-slides')" aria-label="Previous Slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'plateau-slides')" aria-label="Next Slide">&#10095;</a>
+  </div>
+  <div class="dot-container" id="plateau-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b> Aminu Ahmad Babayo<br>
+    <b>Date:</b> May 18, 2025</p>
+</div>
+
+<!-- Gombe -->
+<div id="gombe" class="state-section">
+  <h2>Gombe State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides gombe-slides fade">
+      <img src="images/gombe/gombe1.jpg" alt="Gombe Meeting 1">
+    </div>
+    <div class="mySlides gombe-slides fade">
+      <img src="images/gombe/gombe2.jpg" alt="Gombe Meeting 2">
+    </div>
+    <div class="mySlides gombe-slides fade">
+      <img src="images/gombe/gombe3.jpg" alt="Gombe Meeting 3">
+    </div>
+    <div class="mySlides gombe-slides fade">
+      <img src="images/gombe/gombe4.jpg" alt="Gombe Meeting 4">
+    </div>
+    <div class="mySlides gombe-slides fade">
+      <img src="images/gombe/gombe5.jpg" alt="Gombe Meeting 5">
+    </div>
+    <div class="mySlides gombe-slides fade">
+      <img src="images/gombe/gombe6.jpg" alt="Gombe Meeting 6">
+    </div>
+    <div class="mySlides gombe-slides fade">
+      <img src="images/gombe/gombe7.jpg" alt="Gombe Meeting 7">
+    </div>
+    <div class="mySlides gombe-slides fade">
+      <img src="images/gombe/gombe8.jpg" alt="Gombe Meeting 8">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'gombe-slides')" aria-label="Previous Slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'gombe-slides')" aria-label="Next Slide">&#10095;</a>
+  </div>
+  <div class="dot-container" id="gombe-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b> Not Known Yet<br>
+    <b>Date:</b> June 16, 2025</p>
+</div>
+
+<!-- Sokoto -->
+<div id="sokoto" class="state-section">
+  <h2>Sokoto State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto1.jpg" alt="Sokoto Meeting 1">
+    </div>
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto2.jpg" alt="Sokoto Meeting 2">
+    </div>
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto3.jpg" alt="Sokoto Meeting 3">
+    </div>
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto4.jpg" alt="Sokoto Meeting 4">
+    </div>
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto5.jpg" alt="Sokoto Meeting 5">
+    </div>
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto6.jpg" alt="Sokoto Meeting 6">
+    </div>
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto7.jpg" alt="Sokoto Meeting 7">
+    </div>
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto8.jpg" alt="Sokoto Meeting 8">
+    </div>
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto9.jpg" alt="Sokoto Meeting 9">
+    </div>
+    <div class="mySlides sokoto-slides fade">
+      <img src="images/sokoto/sokoto10.jpg" alt="Sokoto Meeting 10">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'sokoto-slides')" aria-label="Previous Slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'sokoto-slides')" aria-label="Next Slide">&#10095;</a>
+  </div>
+  <div class="dot-container" id="sokoto-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b> Not Know Yet <br>
+    <b>Date:</b> May 25, 2025</p>
+</div>
+
+<!-- Taraba -->
+<div id="taraba" class="state-section">
+  <h2>Taraba State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba1.jpg" alt="Taraba Meeting 1">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba2.jpg" alt="Taraba Meeting 2">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba3.jpg" alt="Taraba Meeting 3">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba4.jpg" alt="Taraba Meeting 4">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba5.jpg" alt="Taraba Meeting 5">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba6.jpg" alt="Taraba Meeting 6">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba7.jpg" alt="Taraba Meeting 7">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba8.jpg" alt="Taraba Meeting 8">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba9.jpg" alt="Taraba Meeting 9">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba10.jpg" alt="Taraba Meeting 10">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba11.jpg" alt="Taraba Meeting 11">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba12.jpg" alt="Taraba Meeting 12">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba13.jpg" alt="Taraba Meeting 13">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba14.jpg" alt="Taraba Meeting 14">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba15.jpg" alt="Taraba Meeting 15">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba16.jpg" alt="Taraba Meeting 16">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba17.jpg" alt="Taraba Meeting 17">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba18.jpg" alt="Taraba Meeting 18">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba19.jpg" alt="Taraba Meeting 19">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba20.jpg" alt="Taraba Meeting 20">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba21.jpg" alt="Taraba Meeting 21">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba22.jpg" alt="Taraba Meeting 22">
+    </div>
+    <div class="mySlides taraba-slides fade">
+      <img src="images/taraba/taraba23.jpg" alt="Taraba Meeting 23">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'taraba-slides')" aria-label="Previous Slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'taraba-slides')" aria-label="Next Slide">&#10095;</a>
+  </div>
+  <div class="dot-container" id="taraba-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b> Not Known Yet<br>
+    <b>Date:</b> unknown</p>
+</div>
+
+<!-- Yobe -->
+<div id="yobe" class="state-section">
+  <h2>Yobe State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe1.jpg" alt="Yobe Meeting 1">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe2.jpg" alt="Yobe Meeting 2">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe3.jpg" alt="Yobe Meeting 3">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe4.jpg" alt="Yobe Meeting 4">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe5.jpg" alt="Yobe Meeting 5">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe6.jpg" alt="Yobe Meeting 6">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe7.jpg" alt="Yobe Meeting 7">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe8.jpg" alt="Yobe Meeting 8">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe9.jpg" alt="Yobe Meeting 9">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe10.jpg" alt="Yobe Meeting 10">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe11.jpg" alt="Yobe Meeting 11">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe12.jpg" alt="Yobe Meeting 12">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe13.jpg" alt="Yobe Meeting 13">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe14.jpg" alt="Yobe Meeting 14">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe15.jpg" alt="Yobe Meeting 15">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe16.jpg" alt="Yobe Meeting 16">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe17.jpg" alt="Yobe Meeting 17">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe18.jpg" alt="Yobe Meeting 18">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe19.jpg" alt="Yobe Meeting 19">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe20.jpg" alt="Yobe Meeting 20">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe21.jpg" alt="Yobe Meeting 21">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe22.jpg" alt="Yobe Meeting 22">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe23.jpg" alt="Yobe Meeting 23">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe24.jpg" alt="Yobe Meeting 24">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe25.jpg" alt="Yobe Meeting 25">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe26.jpg" alt="Yobe Meeting 26">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe27.jpg" alt="Yobe Meeting 27">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe28.jpg" alt="Yobe Meeting 28">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe29.jpg" alt="Yobe Meeting 29">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe30.jpg" alt="Yobe Meeting 30">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe31.jpg" alt="Yobe Meeting 31">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe32.jpg" alt="Yobe Meeting 32">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe33.jpg" alt="Yobe Meeting 33">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe34.jpg" alt="Yobe Meeting 34">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe35.jpg" alt="Yobe Meeting 35">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe36.jpg" alt="Yobe Meeting 36">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe37.jpg" alt="Yobe Meeting 37">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe38.jpg" alt="Yobe Meeting 38">
+    </div>
+    <div class="mySlides yobe-slides fade">
+      <img src="images/yobe/yobe39.jpg" alt="Yobe Meeting 39">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'yobe-slides')" aria-label="Previous Slide">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'yobe-slides')" aria-label="Next Slide">&#10095;</a>
+  </div>
+  <div class="dot-container" id="yobe-dots"></div>
+  <p class="meeting-info"><b>Lead Convener:</b> Dr. Ali Haruna<br>
+    <b>Date:</b> Febuary 08, 2025</p>
+</div>
+
+<!-- Zamfara -->
+<div id="zamfara" class="state-section">
+  <h2>Zamfara State</h2>
+  <div class="slideshow-container">
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara1.jpg" alt="Zamfara Meeting 1">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara2.jpg" alt="Zamfara Meeting 2">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara3.jpg" alt="Zamfara Meeting 3">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara4.jpg" alt="Zamfara Meeting 4">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara5.jpg" alt="Zamfara Meeting 5">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara6.jpg" alt="Zamfara Meeting 6">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara7.jpg" alt="Zamfara Meeting 7">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara8.jpg" alt="Zamfara Meeting 8">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara9.jpg" alt="Zamfara Meeting 9">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara10.jpg" alt="Zamfara Meeting 10">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara11.jpg" alt="Zamfara Meeting 11">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara12.jpg" alt="Zamfara Meeting 12">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara13.jpg" alt="Zamfara Meeting 13">
+    </div>
+    <div class="mySlides zamfara-slides">
+      <img src="images/zamfara/zamfara14.jpg" alt="Zamfara Meeting 14">
+    </div>
+    <a class="prev" onclick="plusSlides(-1, 'zamfara-slides')" aria-label="Previous Slide">&#10094;</a>
+<a class="next" onclick="plusSlides(1, 'zamfara-slides')" aria-label="Next Slide">&#10095;</a>
+  </div>
+  <p class="meeting-info">
+    <b>Lead Convener:</b> Not Known Yet<br>
+    <b>Date:</b> unknown, 2025
+  </p>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</div>
+
+<script>
+  // Object to store slide indices and intervals for each slideshow
+  const slideshowData = {};
+
+  // Initialize all slideshows
+  function initSlideshows() {
+  const slideshowClasses = [
+    'adamawa-slides', 'bauchi-slides', 'borno-slides',
+    'jigawa-slides', 'kaduna-slides', 'katsina-slides',
+    'plateau-slides', 'sokoto-slides', 'yobe-slides', 'gombe-slides',
+    'taraba-slides', 'zamfara-slides' // <-- Added new states here
+  ];
+
+  slideshowClasses.forEach(slideClass => {
+    // Initialize slide index
+    slideshowData[slideClass] = {
+      currentSlide: 0,
+      interval: null
+    };
+
+    // Show first slide
+    showSlides(1, slideClass);
+
+    // Create dot indicators
+    createDots(slideClass);
+
+    // Start auto-sliding
+    startAutoSlide(slideClass);
+  });
+}
+
+  // Show specific slide for a slideshow
+  function showSlides(n, slideClass) {
+    const slides = document.getElementsByClassName(slideClass);
+    const dots = document.getElementById(slideClass.replace('slides', 'dots'))?.getElementsByClassName('dot');
+    
+    // Reset if out of bounds
+    if (n > slides.length) slideshowData[slideClass].currentSlide = 0;
+    if (n < 1) slideshowData[slideClass].currentSlide = slides.length - 1;
+    
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    
+    // Update current slide index
+    slideshowData[slideClass].currentSlide = (n - 1 + slides.length) % slides.length;
+    const currentIndex = slideshowData[slideClass].currentSlide;
+    
+    // Show current slide
+    slides[currentIndex].style.display = "block";
+    
+    // Update active dot
+    if (dots) {
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      if (dots[currentIndex]) {
+        dots[currentIndex].className += " active";
+      }
+    }
+  }
+document.querySelectorAll('.mySlides img').forEach(img => {
+  img.onerror = function() {
+    this.src = 'placeholder.jpg';
+    this.alt = 'Image not available';
+  };
+});
+  // Navigate slides
+  function plusSlides(n, slideClass) {
+    // Reset timer when manually navigating
+    resetTimer(slideClass);
+    showSlides(slideshowData[slideClass].currentSlide + n + 1, slideClass);
+  }
+
+  // Jump to specific slide
+  function currentSlide(n, slideClass) {
+    resetTimer(slideClass);
+    showSlides(n, slideClass);
+  }
+
+  // Create dot indicators
+  function createDots(slideClass) {
+    const slides = document.getElementsByClassName(slideClass);
+    const dotContainer = document.getElementById(slideClass.replace('slides', 'dots'));
+    
+    if (!dotContainer || slides.length <= 1) return;
+    
+    // Clear existing dots
+    dotContainer.innerHTML = '';
+    
+    // Create dots
+    for (let i = 0; i < slides.length; i++) {
+      const dot = document.createElement("span");
+      dot.className = "dot";
+      dot.onclick = function() { currentSlide(i + 1, slideClass); };
+      dotContainer.appendChild(dot);
+    }
+    
+    // Set first dot as active
+    if (dotContainer.firstChild) {
+      dotContainer.firstChild.className += " active";
+    }
+  }
+
+  // Start auto-sliding
+  function startAutoSlide(slideClass) {
+    // Clear any existing interval
+    if (slideshowData[slideClass].interval) {
+      clearInterval(slideshowData[slideClass].interval);
+    }
+    
+    // Set new interval (change slide every 5 seconds)
+    slideshowData[slideClass].interval = setInterval(() => {
+      showSlides(slideshowData[slideClass].currentSlide + 2, slideClass);
+    }, 3000);
+  }
+
+  // Reset timer when user interacts with slideshow
+  function resetTimer(slideClass) {
+    startAutoSlide(slideClass);
+  }
+
+  /**
+   * Handles scrolling to a section specified in the URL (if any).
+   */
+  function scrollToState() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const state = urlParams.get('state');
+    if (state) {
+      const stateId = state.replace(/\s+/g, '-').toLowerCase();
+      const stateElement = document.getElementById(stateId);
+      if (stateElement) {
+        stateElement.scrollIntoView({ behavior: 'smooth' });
+        // Optional highlight effect
+        stateElement.classList.add('highlighted');
+        setTimeout(() => {
+          stateElement.classList.remove('highlighted');
+        }, 3000);
+      }
+    }
+  }
+
+  // Pause slideshow when hovering
+  function setupSlideshowHover() {
+    const slideshowContainers = document.querySelectorAll('.slideshow-container');
+    slideshowContainers.forEach(container => {
+      const slideClass = container.querySelector('.mySlides').className.split(' ')[1];
+      
+      container.addEventListener('mouseenter', () => {
+        if (slideshowData[slideClass].interval) {
+          clearInterval(slideshowData[slideClass].interval);
+        }
+      });
+      
+      container.addEventListener('mouseleave', () => {
+        startAutoSlide(slideClass);
+      });
+    });
+  }
+  function preloadImages(slideClass) {
+  const slides = document.getElementsByClassName(slideClass);
+  for (let i = 0; i < slides.length; i++) {
+    const img = slides[i].querySelector('img');
+    if (img) new Image().src = img.src;
+  }
+}
+window.addEventListener('scroll', () => {
+  const button = document.getElementById('back-to-top');
+  if (window.scrollY > 300) {
+    button.style.display = 'block';
+  } else {
+    button.style.display = 'none';
+  }
+});
+
+document.getElementById('back-to-top').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('load', () => {
+  document.getElementById('loading-spinner').style.display = 'none';
+});
+  // Run once the page is fully loaded
+  window.addEventListener('load', () => {
+    initSlideshows();
+    scrollToState();
+    setupSlideshowHover();
+  });
+  
+  
+  class SlideshowManager {
+    constructor() {
+      this.slideshows = {};
+      this.initAll();
+    }
+
+    initAll() {
+      const slideshowClasses = [
+        'adamawa-slides', 'bauchi-slides', 'borno-slides',
+        'jigawa-slides', 'kaduna-slides', 'katsina-slides',
+        'plateau-slides', 'sokoto-slides', 'yobe-slides', 
+        'gombe-slides', 'taraba-slides', 'zamfara-slides'
+      ];
+
+      slideshowClasses.forEach(slideClass => {
+        this.initSlideshow(slideClass);
+        this.preloadImages(slideClass);
+      });
+    }
+
+    initSlideshow(slideClass) {
+      this.slideshows[slideClass] = {
+        currentSlide: 0,
+        interval: null
+      };
+
+      this.showSlide(0, slideClass);
+      this.createDots(slideClass);
+      this.startAutoSlide(slideClass);
+    }
+
+    showSlide(index, slideClass) {
+      const slides = document.getElementsByClassName(slideClass);
+      if (!slides.length) return;
+
+      const data = this.slideshows[slideClass];
+      const dots = document.getElementById(`${slideClass.replace('slides', 'dots')}`)?.getElementsByClassName('dot');
+
+      // Wrap around
+      index = (index + slides.length) % slides.length;
+      data.currentSlide = index;
+
+      Array.from(slides).forEach(slide => {
+        slide.style.display = "none";
+      });
+
+      slides[index].style.display = "block";
+
+      if (dots) {
+        Array.from(dots).forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      }
+    }
+
+    navigateSlides(step, slideClass) {
+      const data = this.slideshows[slideClass];
+      if (!data) return;
+      this.resetTimer(slideClass);
+      this.showSlide(data.currentSlide + step, slideClass);
+      this.startAutoSlide(slideClass);
+    }
+
+    jumpToSlide(index, slideClass) {
+      this.resetTimer(slideClass);
+      this.showSlide(index, slideClass);
+      this.startAutoSlide(slideClass);
+    }
+
+    createDots(slideClass) {
+      const slides = document.getElementsByClassName(slideClass);
+      const dotContainer = document.getElementById(`${slideClass.replace('slides', 'dots')}`);
+      if (!dotContainer || slides.length <= 1) return;
+
+      dotContainer.innerHTML = '';
+      Array.from(slides).forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.className = "dot";
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.addEventListener('click', () => this.jumpToSlide(i, slideClass));
+        dotContainer.appendChild(dot);
+      });
+    }
+
+    startAutoSlide(slideClass) {
+      this.resetTimer(slideClass);
+      this.slideshows[slideClass].interval = setInterval(() => {
+        const current = this.slideshows[slideClass].currentSlide;
+        this.showSlide(current + 1, slideClass);
+      }, 5000);
+    }
+
+    resetTimer(slideClass) {
+      clearInterval(this.slideshows[slideClass]?.interval);
+    }
+
+    preloadImages(slideClass) {
+      const slides = document.getElementsByClassName(slideClass);
+      Array.from(slides).forEach((slide, index) => {
+        const img = slide.querySelector('img');
+        if (img) {
+          img.loading = "lazy";
+          if (index < 3) {
+            new Image().src = img.src;
+          }
+        }
+      });
+    }
+  }
+
+  // ===== Main Application Logic =====
+  document.addEventListener('DOMContentLoaded', () => {
+    const slideshowManager = new SlideshowManager();
+
+    // Back to top
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      const activeSlideshow = document.querySelector('.slideshow-container:hover');
+      if (activeSlideshow) {
+        const slide = activeSlideshow.querySelector('.mySlides');
+        if (slide) {
+          const slideClass = Array.from(slide.classList).find(c => c.endsWith('-slides'));
+          if (e.key === 'ArrowLeft') {
+            slideshowManager.navigateSlides(-1, slideClass);
+          } else if (e.key === 'ArrowRight') {
+            slideshowManager.navigateSlides(1, slideClass);
+          }
+        }
+      }
+    });
+
+    // Handle image errors
+    document.querySelectorAll('.mySlides img').forEach(img => {
+      img.onerror = () => {
+        img.src = 'placeholder.jpg';
+        img.alt = 'Image not available';
+      };
+    });
+
+    // Scroll to state
+    const urlParams = new URLSearchParams(window.location.search);
+    const state = urlParams.get('state');
+    if (state) {
+      const stateElement = document.getElementById(state.toLowerCase().replace(/\s+/g, '-'));
+      if (stateElement) {
+        stateElement.scrollIntoView({ behavior: 'smooth' });
+        stateElement.classList.add('highlighted');
+        setTimeout(() => stateElement.classList.remove('highlighted'), 3000);
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
