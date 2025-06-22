@@ -20,57 +20,20 @@ Welcome to the official repository for **The Movement (Tafiyar Matasa)** — a y
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css           # Your main CSS file (extracted from <style> tag)
-│   │
+│   │   └── style.css
 │   ├── js/
-│   │   ├── main.js             # Main JavaScript (extracted from <script> tag)
-│   │   ├── leaders.js          # Leaders data and functionality
-│   │   ├── states.js           # States data and functionality
-│   │   ├── news-events.js      # News & Events functionality
-│   │   └── contact.js          # Contact form handling
-│   │
+│   │   ├── main.js
+│   │   ├── leaders.js
+│   │   ├── states.js
+│   │   ├── news-events.js
+│   │   └── contact.js
 │   ├── images/
 │   │   ├── logo/
-│   │   │   └── TMLogo.png      # Logo image
-│   │   │   └── TMLogo2.png     # Alternate logo
-│   │   │
-│   │   ├── leaders/
-│   │   │   ├── chief-conv.png
-│   │   │   ├── Chairman.png
-│   │   │   ├── secretary.png
-│   │   │   ├── member01.png
-│   │   │   ├── member02.png
-│   │   │   ├── member03.png
-│   │   │   ├── member04.png
-│   │   │   ├── member05.png
-│   │   │   ├── member06.png
-│   │   │   └── member07.png
-│   │   │
-│   │   ├── news/
-│   │   │   ├── News.jpg
-│   │   │   ├── news2.jpg
-│   │   │   └── TMconvs.jpg
-│   │   │
-│   │   ├── events/
-│   │   │   ├── event2.jpg
-│   │   │   └── event03.jpg
-│   │   │
-│   │   └── backgrounds/        # Background images
-│   │       └── hero-bg.jpg
-│   │
-│   └── fonts/                  # If using any local fonts
-│
+│   │   └── leaders/, news/, events/, backgrounds/
+│   └── fonts/
 ├── pages/
-│   ├── about.html              # About page (extracted from section)
-│   ├── leaders.html            # Leaders page
-│   ├── states.html             # States page
-│   ├── news-events.html        # News & Events page
-│   ├── contact.html            # Contact page
-│   └── admin.html              # Admin dashboard
-│
-├── index.html                  # Main HTML file (homepage)
-│
-├── README.md                   # Project documentation
-├── LICENSE                     # License file
-└── .gitignore                  # Git ignore file# The Movement - Tafiyar Matasa
-This is a youth-led initiative dedicated to empowering Nigerian youth for leadership and development.
+│   ├── about.html, leaders.html, states.html, news-events.html, contact.html, admin.html
+├── index.html
+├── README.md
+├── LICENSE
+└── .gitignore
