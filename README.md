@@ -13,8 +13,7 @@ Welcome to the official repository for **The Movement (Tafiyar Matasa)** — a y
 
 ## 🚀 Live Demo
 
-👉 [Visit Live Site](https://yourdomain.com)  
-*(Replace with the real domain or GitHub Pages link)*
+👉 [Visit Live Site]([https://yourdomain.com](https://the-movement-tafiyar-matasa.netlify.app/)  
 
 ## 📁 the-movement-website/
 │
